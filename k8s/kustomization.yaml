@@ -6,4 +6,4 @@ resources:
 images:
 - name: ghcr.io/vijaymaddina/demo-app
   newName: ghcr.io/vijaymaddina/demo-app
-  newTag: 5f42100
+  newTag: "1071e61"
