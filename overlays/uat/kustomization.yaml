@@ -14,7 +14,7 @@ configMapGenerator:
   - name: demo-app-env
     literals:
       - APP_ENV=uat
-      - LOG_LEVEL=info
+      - LOG_LEVEL=debug
 images:
   - name: ghcr.io/vijaymaddina/demo-app
     newTag: "6debb9e"
