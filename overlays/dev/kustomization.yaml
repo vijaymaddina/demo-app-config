@@ -18,4 +18,4 @@ configMapGenerator:
 images:
 - name: ghcr.io/vijaymaddina/demo-app
   newName: ghcr.io/vijaymaddina/demo-app
-  newTag: 9eb8f7f
+  newTag: 6debb9e
