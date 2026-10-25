@@ -2,19 +2,20 @@ apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 namespace: demo-dev
 resources:
-  - ../../base
+- ../../base
 labels:
-  - pairs:
-      env: dev
-    includeTemplates: true
+- includeTemplates: true
+  pairs:
+    env: dev
 replicas:
-  - name: demo-app
-    count: 1
+- count: 1
+  name: demo-app
 configMapGenerator:
-  - name: demo-app-env
-    literals:
-      - APP_ENV=dev
-      - LOG_LEVEL=debug
+- literals:
+  - APP_ENV=dev
+  - LOG_LEVEL=debug
+  name: demo-app-env
 images:
-  - name: ghcr.io/vijaymaddina/demo-app
-    newTag: "5f42100"
+- name: ghcr.io/vijaymaddina/demo-app
+  newName: ghcr.io/vijaymaddina/demo-app
+  newTag: 9eb8f7f
