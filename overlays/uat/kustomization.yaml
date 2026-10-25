@@ -17,4 +17,4 @@ configMapGenerator:
       - LOG_LEVEL=info
 images:
   - name: ghcr.io/vijaymaddina/demo-app
-    newTag: "5f42100"
+    newTag: "6debb9e"
