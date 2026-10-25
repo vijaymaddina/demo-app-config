@@ -1,0 +1,20 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+namespace: demo-uat
+resources:
+  - ../../base
+labels:
+  - pairs:
+      env: uat
+    includeTemplates: true
+replicas:
+  - name: demo-app
+    count: 2
+configMapGenerator:
+  - name: demo-app-env
+    literals:
+      - APP_ENV=uat
+      - LOG_LEVEL=info
+images:
+  - name: ghcr.io/vijaymaddina/demo-app
+    newTag: "5f42100"
